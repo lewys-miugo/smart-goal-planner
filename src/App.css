@@ -1,38 +1,223 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 5px;
+  font-family: Arial, sans-serif;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background: rgb(200, 200, 200);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.App-header h1 {
+  margin: 0;
+}
+
+.App-main {
+  display: block;
+}
+
+.overview {
+  background: rgb(240, 240, 240);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(150, 150, 150);
+}
+
+.overview-stats {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.stat {
+  background: white;
+  padding: 5px;
+  border: 1px solid rgb(180, 180, 180);
+  flex: 1;
+  text-align: center;
+}
+
+.alerts {
+  padding: 5px;
+  border: 1px solid rgb(120, 120, 120);
+}
+
+.alerts.urgent {
+  background: rgb(255, 255, 200);
+}
+
+.alerts.overdue {
+  background: rgb(255, 200, 200);
+}
+
+.forms-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.add-goal-form, .deposit-form {
+  background: rgb(250, 250, 250);
+  padding: 10px;
+  border: 1px solid rgb(170, 170, 170);
+  flex: 1;
+}
+
+.add-goal-form form, .deposit-form form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 5px;
+}
+
+.add-goal-form input, .add-goal-form select,
+.deposit-form input, .deposit-form select {
+  padding: 5px;
+  border: 1px solid rgb(140, 140, 140);
+  font-size: 12px;
+}
+
+.add-goal-form button, .deposit-form button {
+  background: rgb(0, 150, 0);
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.goal-list h2 {
+  color: rgb(70, 70, 70);
+  margin-bottom: 10px;
+}
+
+.goals-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.goal-card {
+  background: white;
+  border: 1px solid rgb(160, 160, 160);
+  padding: 10px;
+}
+
+.goal-card.completed {
+  background: rgb(230, 250, 230);
+}
+
+.goal-info h3 {
+  margin: 0 0 5px 0;
+  color: rgb(40, 40, 40);
+}
+
+.category {
+  background: rgb(120, 120, 120);
+  color: white;
+  padding: 2px 4px;
+  font-size: 10px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.deadline {
+  color: rgb(90, 90, 90);
+  font-size: 11px;
+  margin: 0;
+}
+
+.progress-section {
+  margin: 5px 0;
+}
+
+.amounts {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+  font-size: 12px;
+}
+
+.remaining {
+  color: rgb(130, 130, 130);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: rgb(220, 220, 220);
+  border: 1px solid rgb(180, 180, 180);
+  margin-bottom: 3px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: rgb(150, 150, 150);
+}
+
+.progress-text {
+  font-size: 10px;
+  color: rgb(110, 110, 110);
+}
+
+.goal-actions {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.goal-actions button {
+  flex: 1;
+  padding: 4px;
+  border: 1px solid rgb(140, 140, 140);
+  background: rgb(0, 100, 200);
+  color: white;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.goal-actions .delete-btn {
+  background: rgb(200, 0, 0);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.edit-form input, .edit-form select {
+  padding: 4px;
+  border: 1px solid rgb(140, 140, 140);
+  font-size: 11px;
+}
+
+.loading {
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+  color: rgb(100, 100, 100);
+}
+
+.App-footer {
+  background: rgb(200, 200, 200);
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  border-top: 1px solid rgb(150, 150, 150);
+}
+
+.App-footer p {
+  margin: 0;
+  font-size: 12px;
+  color: rgb(80, 80, 80);
+}
+
+@media (max-width: 600px) {
+  .forms-container, .overview-stats {
+    flex-direction: column;
   }
 }
