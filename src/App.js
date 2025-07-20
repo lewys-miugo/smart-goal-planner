@@ -7,7 +7,7 @@ import AddGoalForm from './components/AddGoalForm';
 import DepositForm from './components/DepositForm';
 import Overview from './components/Overview';
 
-const API_URL = 'http://localhost:3001/goals';
+const API_URL = 'https://api.jsonbin.io/v3/b/687cef1ed039d559a168a033/goals';
 
 function App() {
   const [goals, setGoals] = useState([]);
