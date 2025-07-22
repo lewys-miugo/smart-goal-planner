@@ -2,6 +2,8 @@
 
 A simple React application for tracking and managing financial savings goals.
 
+**[Live Demo](https://smart-goal-tracker.netlify.app/)**
+
 ## Features
 
 - Add new savings goals with target amounts and deadlines
@@ -11,12 +13,13 @@ A simple React application for tracking and managing financial savings goals.
 - Get alerts for urgent goals (30 days or less) and overdue goals
 - Edit and delete existing goals
 
+
 ## Getting Started
 
 ### Prerequisites
 
 - Node.js (version 14 or higher)
-- npm or yarn
+- npm
 
 ### Installation
 
@@ -36,11 +39,6 @@ npm install
 npm start
 ```
 
-4. Start the JSON server (for backend data)
-```bash
-npx json-server --watch db.json --port 3001
-```
-
 The app will open at [http://localhost:3000](http://localhost:3000)
 
 ## Usage
@@ -56,32 +54,58 @@ The app will open at [http://localhost:3000](http://localhost:3000)
 ```
 src/
 ├── components/
-│   ├── Header.js
-│   ├── Footer.js
-│   ├── Overview.js
-│   ├── AddGoalForm.js
-│   ├── DepositForm.js
-│   ├── GoalList.js
-│   └── GoalCard.js
-├── App.js
-├── App.css
-└── index.js
+│   ├── Header.js          # App header with title and GitHub link
+│   ├── Footer.js          # App footer with copyright
+│   ├── Overview.js        # Statistics and alerts dashboard
+│   ├── AddGoalForm.js     # Form to create new goals
+│   ├── DepositForm.js     # Form to add money to goals
+│   ├── GoalList.js        # Container for goal cards
+│   └── GoalCard.js        # Individual goal display and editing
+├── App.js                 # Main app component and state management
+├── App.css               # Application styles
+└── index.js              # React app entry point
 ```
 
 ## Available Scripts
 
-- `npm start` - Runs the app in development mode
-- `npm test` - Launches the test runner
-- `npm run build` - Builds the app for production
-- `npm run eject` - Ejects from Create React App
+- `npm start` - Runs the app in development mode.
 
 ## Technologies Used
 
-- React 19.1.0
-- Create React App
-- JSON Server (for mock backend)
-- CSS
+- **React 19.1.0** - Frontend framework
+- **Create React App** - Build tooling and development setup
+- **CSS** - Styling and responsive design
+- **Netlify** - Hosting and deployment
+
+## Goal Categories
+
+The app supports the following goal categories:
+- Travel
+- Emergency
+- Electronics
+- Real Estate
+- Vehicle
+- Education
+- Shopping
+- Retirement
+- Home
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## License
 
 This project is private and all rights reserved.
+
+## Contact
+
+**Lewys Miugo** - [GitHub Profile](https://github.com/lewys-miugo)
+
+Project Link: [https://github.com/lewys-miugo/smart-goal-planner](https://github.com/lewys-miugo/smart-goal-planner)
+
+Live Demo: [https://smart-goal-tracker.netlify.app/](https://smart-goal-tracker.netlify.app/)
